@@ -12,6 +12,8 @@ def index():
 
 @app.route("/square/<int:number>")
 def calculate(number):
+    if number <= 0:
+        return "Number cannot be less than 0"
     return "{} squared is {}".format(number, number**2)
 
 
